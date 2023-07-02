@@ -1,0 +1,78 @@
+// DAY 1 CODE JOURNEY.. PHP, ASSOCIATIVE ARRAY.
+
+<?php
+
+// Array!
+
+$kumpulanData = [1,2,3,4,5,6,7];
+
+$kumpulanArray = [['Lampung','Jakarta','Surabaya','Palembang'], ['Amerika','France','Singapore','Sumatra_Barat']];
+
+// print_r iyalah recursive, berbeda dengan print biasa.
+/*
+print_r($kumpulanData);
+
+echo "<br>";
+
+echo $kumpulanData[0];
+*/
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+    .kotak {
+        width: 50px;
+        height: 30px;
+        background-color: blue;
+        line_height: 30px;
+        text-align: center;
+        color: #fff;
+        margin: 3px;
+        float: left;
+        transition: 1s;
+
+    }
+    .kotak:hover {
+        background-color: black;
+    }
+
+    .kotak1 {
+        width: 70px;
+        height: 40px;
+        background-color: purple;
+        line_height: 30px;
+        text-align: center;
+        color: #fff;
+        margin: 3px;
+        float: left;
+        transition: 1s;
+
+    }
+    .kotak1:hover {
+        background-color: black;
+    }
+            </style>
+</head>
+<body>
+<h1>Latihan Array.</h1>
+
+<?php foreach( $kumpulanData as $data ) :?>
+<div class="kotak"><?= $data ?></div>
+<?php endforeach; ?>
+<br><br><br>
+<?php foreach ( $kumpulanArray as $arr) :?>
+    <?php foreach ($arr as $smallarr) :?>
+
+<div class="kotak1"><?= $smallarr[0] ?></div>
+<?php endforeach; ?>
+<?php endforeach; ?>
+
+</body>
+</html>
+
