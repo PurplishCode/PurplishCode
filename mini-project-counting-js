@@ -1,0 +1,54 @@
+// HTML CODE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label id="labelCount">0</label><br>
+    <button type="button" id="increaseBtn">Increase</button>
+    <button type="button" id="resetBtn">Reset</button>
+    <button type="button" id="decreaseBtn">Decrease</button>
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+// CSS CODE
+
+#labelCount {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+}
+
+// JS CODE
+
+let count = 0;
+
+document.getElementById("increaseBtn").onclick = function() {
+    count += 1;
+    count = Number(count);
+    document.getElementById("labelCount").innerHTML = count;
+}
+
+document.getElementById("resetBtn").onclick = function() {
+    count = 0;
+    count = Number(count);
+    document.getElementById("labelCount").innerHTML = count;
+}
+
+document.getElementById("decreaseBtn").onclick = function() {
+    count -= 1;
+    count = Number(count);
+    document.getElementById("labelCount").innerHTML = count;
+}
+
+
