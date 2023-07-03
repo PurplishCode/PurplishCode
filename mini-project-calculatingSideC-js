@@ -1,0 +1,42 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  
+    <label>Side A:<input type="text" id="textA"><br></label><br>
+    <label>Side B:<input type="text" id="textB"></label><br><br>
+    <button type="button" id="myButton">Calculate</button>
+    <label id="sidec"></label>
+
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+
+// JS CODE
+
+let x;
+let y;
+let z;
+
+document.getElementById("myButton").onclick = function() {
+    x = document.getElementById("textA").value;
+    x = Number(x);
+
+    y = document.getElementById("textB").value;
+    y = Number(y);
+
+    z = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
+    document.getElementById("sidec").innerHTML = "<br>" + "Side of C: " + z;
+}
