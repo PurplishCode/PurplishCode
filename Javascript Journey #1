@@ -1,0 +1,47 @@
+let siswa = "Darell";
+
+//console.log(siswa);
+//console.log("I love myself!");
+
+//window.alert("Hi!");
+
+/* let privillege = true;
+
+
+let age = 15;
+
+age += 1;
+
+age *= 1;
+
+console.log("My name's " + siswa + ", I'm " + age + " years old.");
+
+console.log("Enrolled:", privillege);
+
+// Syntax ini akan menampilkan paraghraps di HTML menggunakan DOM.
+document.getElementById("p1").innerHTML = "Greetings, " + siswa;
+
+document.getElementById("p2").innerHTML = "You're.. " + age + " years old.";
+
+document.getElementById("p3").innerHTML = "Your enrollment status: " + privillege;
+*/
+
+
+// Window prompt digunakan untuk memberikan user untuk input melalui window, lalu akan terdisplay di console.
+/*let username = window.prompt("What'll be your username: ");
+
+console.log("Welcome, " + username);
+*/
+
+// HTML Input BOX
+let username;
+
+// Coding explainations: Jadi, kita akan memanggil id button,
+// Lalu kita buat function dari Element ID tersebut,  Jika button telah di onclick, maka username variable yang sudah di assigned akan termanipulasi. Dalam context ini,
+// Akan di isikan dengan value yang ter-input dari HTML kita, setelah itu kita melakukan console untuk melihat display nya. Karena username sudah di assign melalui myInput atau input nya.
+
+document.getElementById("myButton").onclick = function() {
+    username = document.getElementById("myInput").value;
+    console.log(username);
+    document.getElementById("afterInput").innerHTML = "Hello, " + username;
+}
