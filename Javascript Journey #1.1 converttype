@@ -1,0 +1,22 @@
+// Convertion Datatype.
+
+/*let age = window.prompt("How old are you: ");
+
+age = Number(age);
+
+age += 1;
+
+console.log(age);
+*/
+
+
+let x;
+let y;
+let c;
+
+x = Number(3,14);
+y = String("3,14");
+c = Boolean("Money");
+// Jika string kosong boolean, maka akan menjadi false. Bila sebaliknya, menjadi true.
+console.log(y, typeof y);
+console.log(c, typeof c);
