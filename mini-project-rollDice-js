@@ -1,0 +1,38 @@
+// HTML FILE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label id="labelX"></label>
+    <label id="labelY"></label>
+    <label id="labelZ"></label>
+    <button type="button" id="rollBtn">Roll</button>
+
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+// JS FILE
+
+let x;
+let y;
+let z;
+
+document.getElementById("rollBtn").onclick = function() {
+    x = Math.floor(Math.random() * 20) + 1;
+    y = Math.floor(Math.random() * 20) + 1;
+    z = Math.floor(Math.random() * 20) + 1;
+
+   document.getElementById("labelX").innerHTML = x;
+   document.getElementById("labelY").innerHTML = y;
+   document.getElementById("labelZ").innerHTML = z;
+}
