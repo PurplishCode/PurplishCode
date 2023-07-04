@@ -1,0 +1,72 @@
+// HTML FILE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <label for="namaInput">Insert Your Username:<input type="text" id="namaInput"></label><br>
+    <label for="changeGender">Male <input type="checkbox" id="changeGender"></label>
+    <br><label for="changeGender1">Female <input type="checkbox" id="changeGender1"></label>
+    <br><br><button type="button" id="tombolInput">Submit</button>
+    <br><br><label id="resultName"></label><br>
+    <label id="resultGender"></label>
+    <br><br>
+    <label for="insertA">Field A: <input type="text" id="insertBoxA"></label>
+    <br><br><label for="insertB">Field B: <input type="text" id="insertBoxB"></label>
+    <br><br><button type="button" id="buttonSubmit">Calculate</button>
+    <br>
+    <label for="afterC" id="afterC"></label>
+    
+    
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+// JS FILE
+
+let userName;
+
+document.getElementById("tombolInput").onclick = function() {
+     userName = document.getElementById("namaInput").value;
+     userName = userName.replaceAll("-", "");
+     checkGender = document.getElementById("changeGender");
+     checkGender2 = document.getElementById("changeGender1");
+
+    if(checkGender.checked) {
+        document.getElementById("resultGender").innerHTML = "You're a male!";
+    } else if(checkGender2.checked) { 
+    document.getElementById("resultGender").innerHTML = "You're a female!";
+    } else {
+        console.log("Properly select your gender.");
+    }
+    if(userName.trim() === "") {
+    console.log("Properly insert your name.");
+    } else {
+        document.getElementById("resultName").innerHTML = "Your name is: " + userName;
+    }
+}
+
+document.getElementById("buttonSubmit").onclick = function() {
+    let a;
+    let b;
+    let c;
+
+    a = document.getElementById("insertBoxA").value;
+    a = Number(a);
+
+    b = document.getElementById("insertBoxB").value;
+    b = Number(b);
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    c = Math.floor(c);
+
+    document.getElementById("afterC").innerHTML = "Square root of Field A and B:" + c;
+}
