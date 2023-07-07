@@ -1,0 +1,26 @@
+// while-LOOP Conditioning.
+// while-loop is like an If statement, but it'll infinitely loop through If the conditions true.
+
+/* let userName = "";
+
+while(userName == "" || userName == null) {
+    userName = window.prompt("Enter your name");
+}
+
+console.log("Greetings..", userName);
+
+*/
+
+// do-while Loop condition.
+// It acts like, Do this code. Then if the condition is met with while statement, Keep repeating if the code still true.
+
+/* let userName;
+
+do{ 
+    userName = window.prompt("Enter your name"); 
+} while(userName == "" || userName == null);
+
+
+console.log("Hello.. ", userName);
+*/
+
