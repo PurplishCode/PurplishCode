@@ -1,0 +1,41 @@
+// Conditioning with && (AND) || (OR) with
+// && (AND) Both must be true.
+// || (OR) Either one can be true.
+
+
+/* let temp = 15;
+let sunny = true;
+
+if(temp > 14 && temp < 20 && sunny)  {
+  console.log("It's warm.");
+} else {
+    console.log("It's cold!");
+}
+
+if(temp > 16 || temp < 16) {
+    console.log("The weather is great.");
+} else {
+    console.log("The weather is bad.");
+}
+
+*/
+
+
+// Conditioning with ! (NOT) Logical Operator "!()"
+// If it's boolean value is true -> false, vice versa.
+
+let temp = 15;
+let rainy = true;
+
+if(!(temp > 14)) { // Is temp NOT greater than 14?
+    console.log("False");
+} else {
+    console.log("True");
+} // Output True.
+
+if(!rainy) {
+    console.log("It's raining outside!");
+} else {
+    console.log("It's not raining outside.");
+}
+
