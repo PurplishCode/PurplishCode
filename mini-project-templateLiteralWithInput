@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <label for="inputType">Input Width:<input type="text" id="inputNama"></label>
+   <label for="inputType">Input height:<input type="text" id="inputUmur"></label>
+   <button type="button" id="myButton">Submit</button> 
+   <br><label id="afterRange"></label>
+    
+    
+    <script src="index.js">
+// Template literal, innerHTML versi ribet :v
+
+
+
+let userName;
+let age;
+let hasil;
+
+
+
+
+
+function panggilInfo(userName, age, hasil) {
+    userName = document.getElementById("inputNama").value;
+    age = document.getElementById("inputUmur").value;
+    age = Number(age);
+
+    hasil = `Halo, ${userName}! <br> Kau berumur ${age} tahun.`;
+
+    document.getElementById("afterRange").innerHTML = hasil;
+}
+
+document.getElementById("myButton").onclick = function() {
+    panggilInfo(userName, age, hasil);
+}
+    </script>
+</body>
+</html>
