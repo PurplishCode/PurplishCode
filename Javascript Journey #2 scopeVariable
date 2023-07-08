@@ -1,0 +1,24 @@
+// Variable scope
+
+// LET vs VAR
+
+
+// Let is limited within the curly brackets {},
+// Var is limited within the function(), basically you couldn't call the variable since it isn't a global variable anymore.
+
+letsPlay();
+
+function letsPlay() {
+    for(let i = 1; i <= 3; i+= 1) {
+
+    }
+}
+
+
+console.log(i); // This syntax still won't acquire the let i variable, even though it's within the curly brackets of function, it's still reffered as local scope only for-loop.
+
+
+var name = "darell";
+
+// Var keyword indirectly alters the window property, to check it.. Simply insert window on your webpage console, preferebly your OWN webpage (Localhost)
+
