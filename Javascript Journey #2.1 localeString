@@ -1,0 +1,35 @@
+// toLocaleString() built-in function!
+// It returns a string with the inclusion of language sensitivity for numerics.
+
+// example: myNumber.toLocaleString(locale, {options});
+// {options} is used for object with formatting options.
+// locale means we're specifying the language. (en-US)
+let myNumber = 1233.789;
+
+let myPercentage = 10;
+
+let myCelcius = 10;
+
+// myNumber = myNumber.toLocaleString("en-US");
+// console.log(myNumber); // Expected output without toLocaleString() == 1233.789;
+// Actual Result with toLocaleString() = 1,233.789;
+
+
+
+myNumber = myNumber.toLocaleString("en-US", {style: "currency", currency: "USD"});
+// We clarify the options as english-United state, we creates a style of currency. Then the currency will be the USD (United State Dollars).
+
+
+console.log(myNumber);
+
+
+// myPercentage = myPercentage.toLocaleString(undefined, {style: "percent"});
+// undefined is a default locale, then we'll assign the style as percent to clarify our variables into percentages.
+
+// console.log(myPercentage);
+
+myCelcius = myCelcius.toLocaleString(undefined, {style: "unit", unit: "celsius"}); // many options for unit value, such as kilometers, mlies, kilogram,
+
+console.log(myCelcius);
+
+
