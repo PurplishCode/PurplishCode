@@ -1,0 +1,31 @@
+// Nested-Function! => Function inside of another function.
+// Outer-Function has access towards inner Function.
+// While Inner Function is "hidden" (inaccesable) outside of Outer function.
+
+let userName = window.prompt("Enter username");
+let userInbox = 0;
+
+
+login();
+
+// This, is our OUTER function.
+function login() {
+
+    if(userName) {
+
+ displayUserName();
+ displayInbox();
+
+
+    function displayUserName() {
+        console.log(`Welcome, ${userName}.`);
+    }
+    function displayInbox() {
+        console.log(`You have ${userInbox} new messages.`);
+
+    }
+} else {
+    window.alert("Uh, oh.. Please refresh back the webpage! :(")
+
+}
+}
