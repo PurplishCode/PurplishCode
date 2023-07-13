@@ -1,0 +1,28 @@
+// FOR-LOOP STATEMENT
+// For-loop is used to loop through codes for certain amount of time.
+
+// For(The count is 10, the count will eventually stop until it's greater or equals to zero.)
+/* for(let i=10; i > 0; i+=-1) {
+    console.log(i);
+}
+console.log("Happy new years!");
+
+*/
+
+// Break and continue of Loop statemnt.
+// We could stop the syntax of code until it reaches a specific amount, let's say for-looping until 15, then we'll break after it reaches 10.
+// There's also a code If we wanted to skip the iteration of the code, but it'll still continue until it reaches the designated amount with continue.
+
+for(let i= 10; i >= 0; i+=-1) {
+    if(i == 10) {
+        continue;
+    } else if(i == 2) {
+        break;
+    }
+    console.log(i);
+}
+
+
+
+
+

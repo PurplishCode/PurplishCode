@@ -1,0 +1,30 @@
+// Template literal is embedded / delimited with (`)
+// Instead of using double or single quotations,
+// Template literal can be used to embedded an expression or variable.
+
+
+/*
+let nama="Darell";
+let umur=16;
+
+
+console.log(`Halo, nama-mu iyalah ${nama} , kau berumur ${umur} tahun! `);
+
+
+
+
+
+
+let userName = window.prompt("Enter your name: ");
+
+let age = window.prompt("Enter your age");
+
+let hasil = panggilUsername(userName, age);
+
+function panggilUsername(userName, age) {
+    console.log(`Halo, nama-mu adalah ${userName}. Kau berumur ${age} tahun!`);
+    return true;
+}
+
+
+console.log(hasil);

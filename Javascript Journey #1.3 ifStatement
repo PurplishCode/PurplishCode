@@ -1,0 +1,25 @@
+// IF statement.
+
+
+// let age = 17;
+
+// if(age <= 16) /* Jika pengkondisian true, maka curly brackets ini akan teresekusi */ {
+//    console.log("You're young.");
+// } 
+// else if(age == 17) /* Jika pengkondisian if iyalah false, maka dicarikan if lainnya, dan jika true, Curly brackets ini akan tereksekusi. */ {
+//  console.log("You're 17 years old!")
+// }
+// else /* Dan jika setiap kondisi false, maka akan diberikan lainnya yaitu else. Kondisi ini akan tereksekusi bila setiap IF statement false. */ {
+//    console.log("You're old!");
+// }
+
+
+// Pengkondisian menggunakan Boolean Value
+/*let online = false;
+
+if(online) {
+    console.log("You're online!");
+} else {
+    console.log("You're not online..");
+}
+*/

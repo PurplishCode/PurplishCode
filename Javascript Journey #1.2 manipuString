@@ -1,0 +1,35 @@
+// String Manipulation
+
+/* let userName = "   Darell   ";
+let number = "088-555-2234";
+// .trim() digunakan untuk menghapuskan spaces kosong.
+userName = userName.trim();
+
+console.log(userName.length);
+console.log(userName.toUpperCase());
+console.log(userName.toLowerCase());
+// Selecting a characters, it'll generate the keyword based on which indexes. Always starts from 0. console.log(userName.charAt(0));
+// Selecting the index of specific keyword, example r = 2. console.log(userName.indexOf("r"));
+// Selecting an index whom last occured. console.log(userName.lastIndexOf("D"));
+// Replacing every bits of anything, with anything. ("-") into ("+"). number = number.replaceAll("-","+");
+
+number = number.replaceAll("0","1");
+
+console.log(number);
+
+*/
+
+// String .slice("First index", "Designated index") Mengekstrak suatu string tanpa memodifikasi string tersebut.
+
+
+
+let nama = "Darell Daffa";
+let fullNama = "Darell Daffa Fawwas";
+
+
+firstName = nama.slice(0, nama.indexOf(" "));
+lastName = fullNama.slice(fullNama.indexOf(" ") + 1); // Ini akan memotong fullNama, lalu hanya memberikan value setelah empty spaces menggunkan + 1.
+//nama = nama.slice(7, 12);
+
+console.log(firstName);
+console.log(lastName);

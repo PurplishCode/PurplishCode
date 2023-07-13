@@ -1,0 +1,26 @@
+// FUNCTION!
+// One of the most important piece of lessons, function() is helpful to call upon syntax of code
+// Without creating it again. Write once, call anytime!
+
+// function() also supports global variable, but if within the function declares a variable, it'll be only sets for the local function.
+// Unless you're explicitly throws it onto another function.. But it depends on which goes first or whatnot.
+
+let name= "darell";
+let age= 16;
+
+
+withinName();
+
+function withinName() {
+    let userName = "ilham";
+    let age= 14;
+
+    callBirthday(userName, age);
+}
+
+function callBirthday(userName, age) {
+    console.log("Happy birthday, " + name);
+    console.log("Happy birthday aswell, " + userName + ". You're " + age + " years old!");
+}
+
+// To call the function, you'll have to write the function names with the sets of parenthesses.

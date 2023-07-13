@@ -1,0 +1,22 @@
+// Switch statemnt! Sebuah alternatif ketimbang memakai else if,
+
+let nilai = 50;
+
+switch(true) {
+    case (nilai >= 100):
+        console.log("You did amazing!")
+        break;
+    case (nilai >= 90):
+        console.log("You did great!");
+        break;
+    case (nilai >= 70):
+        console.log("You did alright..");
+        break;
+    case (nilai < 60):
+        console.log("You FAILED.");
+        break;
+ default:
+    console.log(nilai, " isn't a valid grade.");        
+}
+
+// Case bekerja seperti else-if, jika tidak ditemukan case cocok. Maka akan secara default dieksekusi, default bekerja seperti else.
