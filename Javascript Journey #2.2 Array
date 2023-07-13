@@ -1,0 +1,107 @@
+// Uh-oh, lessons of array!
+
+// Array can store many values into single variable.
+
+let fruit = ["apple","banana","guavacado"]; // The value insides of array is called elements.
+
+// If we wanted to specifically invoke value, add "[]" then insert the index.
+
+// fruit[3] = "orange"; // This'll add the value of orange into the specific index.
+
+// but IF fruit[0], then it'll replace the value of existing index 0 into orange.
+
+fruit.push("melon"); // .push() method adds another value onto the arrays.
+
+fruit.pop(); // .pop() method DELETES the last element of arrays.
+
+fruit.unshift("durian"); // .unshift() method adds another value in the beginning of arrays.
+
+fruit.shift() // .shift() method also DELETES the first element of an array, simillar to .pop() with its counterpart .push()
+
+
+let length = fruit.length; // The length of an array.
+
+fruit = fruit.indexOf("apple"); // The index of the elements apple.
+
+// OR
+
+// let fruit2 = ["watermelon"];
+
+// fruit = fruit2.concat(fruit); // This'll add the value of fruit2 (watermelon) into fruit arrays.
+
+
+console.log(length);
+
+console.log(fruit);
+
+
+
+// Looping with Array!
+
+// Simple For-loop iteration.
+let arr = [5,10,15,20];
+
+// Arr is our arrays, we'll create for-loop statement. i sets to 0, 'i' will continue until it reaches arr.length (Which is 3), then it'll increment by 1.
+// if 'i' is equal to 1 (10 in elemets of array), it'll stop the code or "break"
+// We'll display it the arrays with [i]. 
+/* for(let i=0; i <= arr.length; i+=1) {
+    if(i == 1) {
+        break;
+    }
+    console.log(arr[i]);
+}
+*/
+
+
+// Backward Array.
+
+// We'll create an 'i' variable sets as arr.length(which is 3) then it'll minus by 1, i will continue until it's greater or equals to 0, then decremenet the i with (-=)
+for(let i= arr.length - 1; i >= 0; i-=1) {
+    if(i == 1) {
+        break;
+    }
+    console.log(arr[i]);
+}
+
+// Sorting array of strings element!
+
+
+let vehicle = ["Toyota","Honda","Yamaha"];
+
+// vehicle = vehicle.sort(); // This'll sort the elements by it's alphabetical
+// vehicle = vehicle.sort().reverse(); // Same thing but reversed.
+
+
+for(let count of vehicle) {
+    console.log(count);
+}
+
+
+// 2D Array! An array made of with array.
+                    // ---> --> ---> Is what we call column.
+                    let videogames = ["roblox", "minecraft", "warcraft"];
+                    let toys =       ["chessboard","rubic","doll"];
+                    let virtualgames = ["simulator","afk","dungeon"];
+                    
+                    
+                    
+                    // This is our 2D array, we store buncha arrays into big chunks.
+                    let gameStore = [videogames, toys, virtualgames];
+                    
+                    
+                    // Time to alter singular elements within the big chunks of array indences.
+                    
+                    
+                    // Reminder: Computer reads indexes from 0.
+                    gameStore[0][0] = "GTA"; // row x column, this is called indences. We invoke the specific elements of array.
+                    // This'll alter the column 0 of rows 0 (which is videogames array, and roblox elements.)
+                    
+                    
+                    for(let games of gameStore) {
+                        for(let itemStore of games) {
+                        console.log(itemStore);
+                    
+                        }
+                    }
+
+
