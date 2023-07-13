@@ -1,0 +1,138 @@
+// array.forEach() = executes provided callback function, once for every array.
+
+// More array...
+
+// element = It means the value for array, "doe" "joe" "woe" is considered as element.
+// index = Very obvious.
+// array = Specifying the arrays.
+
+// An array of students.
+let arrStudents = ["doe","joe","woe"];
+
+arrStudents.forEach(callArr);
+arrStudents.forEach(eachArr);
+
+// We create an function with built-in arguments. for each array (as in index) we'll refer their elements starts point from 0, then we'll add .upperCase()
+// For the elements. Then with the help of substring(1), it helps to nullify element[0].upperCase() since it'll only selects the 0 index only.
+
+function callArr(element,index,array) {
+    array[index] = element[0].toUpperCase() + element.substring(1);
+
+}
+
+function eachArr(element) {
+    console.log(element);
+
+
+}
+
+
+let testSub = ["noos","nees"];
+
+testSub.forEach(subPlease);
+
+function subPlease(element,index,array) {
+array[index] = element[0].toUpperCase() + element.substring(1);
+}
+
+
+console.log(testSub);
+
+// array.map() = Basically executes provided callback function, once for every array THEN creates a newer one.
+
+// Gosh darn, SO MANY ARRAY!
+
+
+
+// We create a numlist of arrays, consists of 4. (0 included)
+
+let numList = [1,2,3,4,5];
+
+numList = numList.map(whyNum);
+
+
+numList.forEach(printForeach);
+
+
+function whyNum(element) {
+    return Math.pow(element, 3);
+}
+
+function printForeach(element) {
+    console.log(element);
+}
+
+// array.filter() = Creates a new array after filtering the ones whom passed the test from function.
+
+// ARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAYYYYYYYYYYYY
+
+
+let students = [14,20,30,12,22];
+
+// We're checking if the students age are greater or equals to 18.
+
+let age = students.filter(checkAge); 
+
+age.forEach(print);
+
+function checkAge(element) {
+    return element >= 18;
+}
+function print(element) {
+    console.log(element);
+}
+
+// array.reduce() = > reduces an array into single value, which means summed up everything.
+
+
+let prices = [5,10,15,20, 25];
+
+// In this context, we summed every int as one. Which deliberately adds each others.
+
+total = prices.reduce(checkOut);
+
+total = alterCurr(total);
+
+console.log(`The total price is: ${total}`);
+
+function checkOut(total, element) {
+    return total + element;
+}
+
+
+function alterCurr(element) {
+    element = element.toLocaleString("en-US", {style: "currency", currency: "USD"});
+  return element;
+}
+
+// Sorting an array numbers!
+
+
+let nilai = [70,60,50,80,90];
+
+let nilaTotal = nilai.sort(descendingSort);
+
+nilaTotal.forEach(print);
+
+
+let nilaiBaru = [80,88,76,50,90];
+
+/* Irrelevant function.
+
+
+let cariNilai = maxFind(nilaiBaru);
+console.log(cariNilai);
+
+function maxFind(element) {
+    return Math.max(...element);
+}
+*/
+
+function descendingSort(x,y) {
+    return x - y;
+}
+
+
+function print(element) {
+    console.log(element);
+}
