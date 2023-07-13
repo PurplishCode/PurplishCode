@@ -1,0 +1,40 @@
+// Passing object into function.
+
+
+class car {
+
+    constructor(name,color,year) {
+        this.name = name;
+        this.color = color;
+        this.year = year;
+    }
+}
+
+
+
+let car1 = new car("Bugatti", "yellow", 2003);
+let car2 = new car("Mustang", "blue", 2013);
+let car3 = new car("Corvete", "white", 2022);
+
+
+// When invoking function, just pass the object as an arguments.
+
+
+
+
+alterCar(car1, "Telo");
+
+displayInfo(car1);
+
+// We're setting the parameters value with just one, "car". (This'll acts like this. for instances)
+
+function displayInfo(car) {
+ console.log(`You have ${car.name}, the color is.. ${car.color}! In the year of ${car.year}`);
+
+}
+
+
+function alterCar(car, name) {
+    car.name = name;
+
+}
