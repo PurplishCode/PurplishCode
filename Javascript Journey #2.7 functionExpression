@@ -1,0 +1,80 @@
+// Arrow function expressions!! =>
+// Important lessons.
+// It's an alternative of the traditional function expression
+
+
+// Traditional function
+
+const sayHello = function(name) {
+    console.log(`Greetings, ${name}!`);
+}
+sayHello("Darell");
+
+
+// Arrow function.
+
+// You don't have to specifically write function(), since it's been contributed with the "=>" expression.
+// However, this method is special case.. We also don't have to use curly brackets IF it's only one statement.
+// There are different ways of using set parenthesess arguments, you'll have to use it IF there's more than one argument.
+
+const sayYo = userName => console.log(`Greetings, ${userName}!`);
+
+sayYo("Ilham");
+
+const countUp = (x,y) => { let result = x + y; return result};
+
+
+let w1 = window.prompt("Enter Number");
+w1 = Number(w1);
+
+let w2 = window.prompt("Enter Number");
+w2 = Number(w2);
+
+console.log(countUp(w1,w2));
+
+
+function percentageUp(x, y) {
+    return (x / y) * 100;
+}
+
+console.log(`Your percentage of wining is.. ${percentageUp(50, 50)}`);
+
+
+
+// This is the usage of anonymous function with "=>" keyword, although you're required to place the function before initazing it.
+
+
+const percentageArrow = (x,y) => { return (x / y) * 100};
+
+const alterPer = (element) => {
+    element = element.toLocaleString(undefined, {style: "percent"});
+    return element;
+}
+
+percent = percentageArrow(30, 10);
+percent = alterPer(percent);
+
+console.log(`Your percentage is ${percent}`);
+
+
+
+let grades = [40,50,10,30,70];
+
+
+// function expressions (anonymous) with "=>"
+
+// (arguments) "=>" (Code you'll like to perform), simillar to function.. And this isn't easier to read lol.
+
+grades.sort((x,y) => y - x );
+grades.forEach((element) => console.log(element));
+/*
+const sortArr = (x,y) => { return x - y};
+const printArr = (element) => { console.log(element)}; 
+
+sortGrade = grades.sort(sortArr);
+
+sortGrade.forEach(printArr);
+
+
+*/
+
