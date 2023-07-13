@@ -1,0 +1,69 @@
+// Callback!
+
+// A function passed as an arguments into another function.
+// It's helpful to ensure if the tasks completed or not, then it'll run the code.
+// It helps to write asynchronus code, when function1 has to wait for others function.
+// Example: Waiting for a file to load, if the file loads.. Then the next function / doSomething.
+
+
+/*
+
+let count = countCount(3,5);
+
+displayLabel(count);
+
+function countCount(x, y) {
+    return x + y;
+}
+
+function displayCount(display) {
+    console.log(display);
+}
+
+
+function displayLabel(display) {
+    document.getElementById("myLabel").innerHTML = display;
+
+}
+*/
+
+// Alternative way to display this.
+
+
+
+
+// We'll invoke the function of count with 3 sets of arguments, with the last argument as our designated function.
+// We create our count() function, we'll have to get matching parameters from the argument, our (1,2, displayDOM) wil be (x,y, callBack).
+//  We create a condition of result, then with the arguments of our displayDOM has passed by, we'll use it to display our result into the webpage. 
+count(5, 10, displayDOM);
+
+function count(x,y, callBack) {
+    let result = x + y;
+     callBack(result);
+}
+
+
+
+function displayDOM(output) {
+    document.getElementById("myLabel").innerHTML = output;
+}
+
+
+
+let count1 = window.prompt("Enter count 1");
+count1 = Number(count1);
+
+let count2 = window.prompt("Enter count 2");
+count2 = Number(count2);
+
+
+counts(count1, count2, callCount);
+
+function counts(x,y, callBack) {
+    let result = x + y;
+    callBack(result);
+}
+
+function callCount(display) {
+    console.log(display);
+}
