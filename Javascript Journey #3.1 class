@@ -1,0 +1,261 @@
+// class in Javascript!!
+// It's like a blueprint of creating objects, define what property / methods they have.
+// Use constructor to define unique property.
+
+
+// Our class.
+/*
+
+class Player {
+    username = "Icy";
+
+    score = 0;
+
+    pause() {
+        console.log("You paused the game.");
+    }
+    exit() {
+        console.log("You exited the game.");
+
+
+    }
+}
+
+// Our object!
+// You can keep re-using the classes property / methods, since it doesn't affect anything (except altering the property within the designated object).
+
+
+const player1 = new Player;
+const player2 = new Player;
+
+
+player2.exit();
+
+// We updated the player1 score to 15.
+player1.score += 15;
+player2.username = "Ilham";
+
+console.log(`You have ${player2.score} score, ilham!`);
+
+
+player1.pause();
+console.log(`You have, ${player1.score} score.. ${player1.username}.`);
+
+*/
+
+// constructor = a special method of class.
+// accepts arguments and assign property.
+
+/*
+
+class classroom {
+    constructor(name, age, gpa) {
+    this.name = name;
+    this.age = age;
+    this.gpa = gpa;
+
+    }
+    study() {
+        console.log(`${this.name} is currently studying. `);
+    }
+    test() {
+        console.log(`${this.name} have ${this.gpa} GPA, which isn't a lot.. They're also ${this.age} years old.`);
+    }
+}
+
+w1 = window.prompt("Enter student name");
+w2 = window.prompt("Enter student age");
+w2 = Number(w2);
+w3 = window.prompt("Enter student GPA");
+w3 = Number(w3);
+
+
+// We can assign different value for that property to each students.
+
+const siswa1 = new classroom(w1,w2,w3);
+
+
+siswa1.study();
+siswa1.test();
+
+const siswa2 = new classroom("Ilham", 15, 6);
+
+siswa2.study();
+
+siswa2.test();
+
+
+*/
+
+// static = belongs to the class, and not object.
+
+class car {
+    static countCar = 0;
+    constructor(name) {
+        this.name = name;
+        car.countCar+=1;
+    }
+    static startRace() {
+        console.log("3..2..1.. GO!");
+    }
+}
+
+// We assign a variable with each invoking the class. With the assist of constructor(), we'll assign the value into each object immediately.
+
+const car1 = new car("Toyota");
+const car2 = new car("Honda");
+
+// To access the static of property (countCar), we'll have to reference the class rather than object.
+console.log(car.countCar);
+// This'll summed up the amount of car (new property) we have so far, and it's 2.
+
+car.startRace();
+
+
+
+// Inheritance in class!
+// a child class can inherent every methods / property from another class (parent class).
+
+// Instead of repeating the same code, we'll use extends!
+
+// BUT, if the classes has an unique attribute || property, keep it.
+
+// Our parent class will be Animal.
+// This creates methods / property that'll be re-used with our child's class.
+
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`This ${this.name} is eating.`);
+
+
+    }
+    sleep() {
+        console.log(`This ${this.name} is soundly sleeping.`);
+        
+    }
+}
+
+
+// Example.. This (cat, fish) is our child class.
+
+// Basically, cat is our child's class of Animal (parent class).
+class cat extends Animal {
+    
+    name = "cat";
+
+
+    walk() {
+        console.log(`This ${this.name} is walking!`);
+  
+    }
+    
+}
+
+class fish extends Animal{
+    name = "fish";
+
+
+    swim() {
+        console.log(`This ${this.name} is swimming!`);
+  
+    }
+   
+}
+
+const animal1 = new fish;
+const animal2 = new cat;
+// We didn't explicitly wrote the eat() methods in our fish class, but it inherites that methods from our parent's class which is Animal.
+
+animal1.eat();
+animal2.eat();
+
+// super => Refers to the parent's class.
+// It's commonly used to invoke constructor from the parent's class.
+// Basically helps you wtih re-using the same property with constructor, but..
+// If you have unique property for particular class, then simply create the property with constructor(child).
+
+class Animal {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log(`This ${this.name} is eating! `);
+    }
+}
+
+class Rabbit extends Animal{
+  constructor(name,age,runSpeed) {
+    super(name,age);
+    this.runSpeed = runSpeed;
+  }
+}
+
+class Fish extends Animal{
+    constructor(name,age,swimSpeed) {
+        super(name,age);
+        this.swimSpeed = swimSpeed;
+}
+}
+
+class Cat extends Animal{
+    constructor(name,age,walkSpeed) {
+        super(name,age);
+        this.walkSpeed = walkSpeed;
+}
+}
+
+animal1 = new Rabbit("Rabbit", 2, 40);
+
+console.log(animal1.name);
+
+
+
+// get and set!
+// get => binds an object property to a function IF that property has been accessed
+// set => binds an object property to a function when that property is assigned a value
+
+class car {
+
+    constructor(price) {
+        this._price = price;
+        this._gas = 50;
+        
+    }
+    // With this get methods (OR the _property), the value is NOT to mess with and can't be accessed unless directly.
+
+    get price() {
+        return `This car is equivelant of ${this._price}$`;
+ }
+    get gas() {
+        return `Your fuel tank is ${this._gas}L (${this._gas / 50 * 100}%)`};
+        
+        // With the "set" method, the property of (gas) is changeable. 
+        set gas(value) { // This'll limit the amount of value it'll receive. If it's greater than 50, then it'll stay as 50. If it's lesser than 0, then it'll stay as 0
+            if(value > 50) {
+                value = 50;
+            } else if(value < 0) {
+                value = 0;
+            }
+            // this._gas has been assigned into our value property (parameters of set).
+            this._gas = value;
+        }
+    }
+
+
+
+const car1 = new car(50);
+
+car1.gas = 100;
+// With get method, we don't have to invoke the function proper "()" to access it, act it's a property.
+// Although altering the price (get) is inacessible, it's still possible to DIRECTLY change it by reffering to its object name (_price)
+
+console.log(car1.price);
+console.log(car1.gas);
+
+
+
+
