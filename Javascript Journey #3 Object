@@ -1,0 +1,71 @@
+// Object in Javascript!!
+
+// Property = what the object has.
+// Method = what the object can do.
+// Using the "." to access the specific method/property.
+
+// Within the sets of curly bracklets on this object, we're able to assign property, method.
+
+/*
+const videoGame = {
+    model: "RPG",
+    price: "56$",
+    year: 2004,
+    
+    // Our methods, which creates function.
+    game : function() {
+        console.log("Game of Era!");
+    }
+    
+}
+
+// Invoking each of the singular property for videoGame.
+console.log(videoGame.model);
+console.log(videoGame.price);
+console.log(videoGame.year);
+
+// Invoking the methods of particular function inside videoGame.
+videoGame.game();
+
+*/
+
+// (this) with Object!
+// It acts for referencing point of current object, depending of what immediate context it is.
+
+/*
+
+const car1 = {
+    model: "Toyota",
+    prices: "54$",
+    year: 2021,
+
+    drive:function() {
+        console.log(`You drove ${this.model} to southeast! Which costs you ${this.prices}, in the year ${this.year}.`);
+    }
+}
+const car2 = {
+    model: "Honda",
+    prices: "69$",
+    year: 2000,
+
+    drive:function() {
+        console.log(`You drove ${this.model} to southeast! Which costs you ${this.prices}, in the year ${this.year}.`);
+    }
+}
+// Even if we have simillar property && methods, we'll have it clarify into our current object it resides. ("this." also can means "obj.")
+car1.drive();
+car2.drive();
+
+
+// This'll alter the (name) on windows, since it's the immediate context. simillar as (window.name)
+
+
+
+window.name = null;
+
+
+console.log(this.name);
+
+
+*/
+
