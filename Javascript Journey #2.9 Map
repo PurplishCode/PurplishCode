@@ -1,0 +1,43 @@
+// Map = object that holds key value pairs of any data-type.
+
+
+const gameStore = new Map([
+    ['GTA', 30],
+    ['Roblox', 1],
+    ['Minecraft', 20]
+
+]);
+
+
+
+
+// get method
+// It's a method of getting the key of object from gameStore variable with Map object.
+
+// shoppingCart += gameStore.get('GTA');
+
+
+// set method
+// It's a method of adding key (String) and value towards the existing Map object.
+
+// let shoppingCart = gameStore.set('Mobile', 5);
+
+
+// delete method
+// Deletes the existing pair of (key, value).
+
+// let shoppingCart = gameStore.delete("GTA");
+
+// has method
+// Check if the Map object HAS the key.
+
+// let shoppingCart = gameStore.has("GTA");
+
+// console.log(shoppingCart);
+
+// size method
+// Checking the amount of pair on our existing Map object.
+console.log(gameStore.size);
+
+
+gameStore.forEach((value,key) => console.log(`${key} $${value}`));
