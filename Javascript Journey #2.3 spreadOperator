@@ -1,0 +1,26 @@
+                   // spread operators!
+// It uses to unpack something, then spread it into individual elements (...) while also expanding it.
+
+
+let number = [1,2,3,4,5];
+
+number = Math.max(...number); 
+// If we try to find the maximum of numbers in array directly, the output will be NaN.
+// Since we're just invoking the ARRAY which is object, and not the elements of it.
+// But, with the usage of spread (...) we easily decipher the arrays then find its maximum numbers.
+
+
+console.log(number);
+
+let classroom1 = ["Dori","Sori","Wori"];
+let classroom2 = ["Dari","Sari","Yari"];
+
+
+classroom1.push(...classroom2); // Expected output without (...) spread operator:
+// ['Dori','Sori','Wori', Array(3)]. We're basically emerging classroom2 arrays and not its elements.
+
+
+
+console.log(classroom1);
+
+// Actual output =  ['Dori','Sori','Wori', 'Dari','Sari',' Wari']
