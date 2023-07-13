@@ -1,0 +1,31 @@
+// rest parameters
+
+// When you invoke a function with the rest parameters, it'll pack the arguments into array.
+
+
+
+let a = 1;
+let b = 2; 
+let c = 3;
+let d = 4;
+
+
+// console log mengambil function sum(), dengan dua butir arguments.
+
+console.log(sum(a,b,c,d));
+
+// That function uses rest parameters, which makes the passing arguments into arrays and indefinite numbers.
+// We create a variable of total, then creating for-loop which unpacks the newly-made of arrays into number.
+// Then the total will increment by sums of the number, it depends on how many of passing arguments into the parameters.
+// We return total back to the sum() on console.log
+function sum(...numbers) {
+    let total = 0;
+
+    for(let number of numbers) {
+    total += number;
+
+
+    }
+    return total;
+
+}
