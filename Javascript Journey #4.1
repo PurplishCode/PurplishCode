@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+   <h1 id="myMenu">Menu</h1>
+   <input type="radio" name="gameCart" value="roblox" checked="checked">
+   <label for="roblox">Roblox</label><br>
+   <input type="radio" name="gameCart" value="minecraft">
+   <label for="minecraft">Minecraft</label><br>
+   <input type="radio" name="gameCart" value="lostsaga">
+   <label for="lostsaga">Lost Saga</label>
+   
+   <ul>
+    <li>Adventure</li>
+    <li>RPG</li>
+    <li>Sandbox</li>
+   </ul>
+
+   <div class="storePass">10$ Robux Giftcard</div>
+   <div class="storePass">25$ Mineplex</div>
+   <div class="storePass">10$ Premium ScrollPass</div>
+   
+   
+   
+   
+   <script  src="index.js">
+    
+
+// Let's select more elements on webpage with DOM!
+
+
+let menu = document.getElementById("myMenu");
+
+
+
+// We specify our Id, then style based on your choice.. We'll change the bg to cyan.
+
+// Using the ElementById has an exception, we could immediately access the style of certain property without specifying the index. (Duh since it's only singular).
+
+menu.style.backgroundColor = "cyan";
+
+menu.style.fontFamily = "cursive";
+
+
+// the "name" attribute is useful IF our elements are within the same group.
+
+
+
+// We uses plural for selecting many elements at once.
+
+
+/*
+
+let gameCarts = document.getElementsByName("gameCart");
+
+
+gameCarts.forEach(games => {
+   if(games.checked) {
+      console.log(games.value);
+   }
+});
+
+*/
+
+/*
+
+// This will include each of every tags.. (We'll take li).
+
+
+let list = document.getElementsByTagName("li");
+
+// To actually access the style of certain elements, you'll have to specify of WHICH elements of it. (Works like an array, you select the property with index)
+list[0].style.backgroundColor = "purple";
+
+*/
+
+/*
+
+// ClassName!
+let store = document.getElementsByClassName("storePass");
+
+// Basically acts the same as doing style on our css, but with JS.
+
+store[0].style.border = "1px solid red";
+
+*/
+
+
+// querySelector!
+// It can reference tons, starting from className, tags, attributes, id, etc..
+
+// If we're referencing an ID, preceeds the value with #
+
+
+// let all = document.querySelector("#myMenu");
+// all.style.color = "blue";
+
+// If we're referencing a className, preceeds with "." (Similar as CSS)
+
+// The querySelector only selects the FIRST element of groups.. Unless you're selecting all with querySelectorAll
+let all = document.querySelectorAll("li");
+
+//all[2].style.color = "blue";
+
+// OR
+
+// This includes every element within the group.
+
+all.forEach(Element => {
+   Element.style.backgroundColor = "purple";
+})
+// with querySelectorAll(), this will provide access which also selects the specific elements within a groups.
+
+// all[2].style.color = "blue";
+
+
+
+
+// This selects an attribute based on specific parts.
+
+let selectAtt = document.querySelectorAll("[for]");
+
+
+selectAtt.forEach(element => {
+   element.style.backgroundColor = "gold";
+})
+
+
+let selectClass = document.querySelectorAll(".storePass");
+
+
+selectClass.forEach(classes => {
+ classes.style.color = "cyan";
+})
+
+
+
+// NEXT-TOPIC.. HIERARCHY OF DOM!
+    </script>
+</body>
+</html>
