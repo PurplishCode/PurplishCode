@@ -1,0 +1,89 @@
+
+ // Date object!
+// The Date object is used to work with date & times.
+
+
+// Date(0) will be our inner reference point of Date. which is 12/31/1969, 6:00:00 PM
+// let date = new Date(2023, 0, 1, 2, 3, 5, 25);
+                  // y - m - d - hrs - min - sec - misec
+
+// You can even pass string too!!
+
+let date = new Date; 
+
+// Pretty self-explanatory.
+
+/*
+
+year = date.getFullYear();
+
+// Our current day of the Week. (0 => Sunday, 6 => Saturday )
+
+dayOfWeek = date.getDay();
+
+// Our current day of the Month.  
+dayOfMonth = date.getDate();
+
+// This'll display our current datetime.
+// console.log(date);
+
+month = date.getMonth();
+
+hour = date.getHours();
+
+second = date.getSeconds();
+
+milisecond = date.getMilliseconds();
+date.toLocaleString();
+
+*/
+
+// year = date.getFullYear();
+
+// We can even manipulate that specific time!
+
+/*
+date.setFullYear(2022);
+
+date.setMonth(5);
+
+date.setDate(1);
+
+date.setHours(6);
+
+date.setMinutes(2);
+
+date.toLocaleString();
+
+*/
+// Result: Wed Jun 01 2022 06:02:08 GMT-0700 (PDT)
+
+
+
+// Formatting our time inside of function, we can invoke our formatting alterations with formatDate().
+
+function formatDate(date) {
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  return `${year}/${month}/${day}`;
+}
+
+function formatTime(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let amOrPm = hours >= 12 ? "P.M" : "A.M";
+ 
+  hours = (hours % 12) || 12;
+
+  return `${hours}:${minutes}:${seconds} ${amOrPm}`;
+
+  // Re-assigning hours for standard time.
+
+}
+
+
+document.getElementById("myLabel").innerHTML = formatTime(date); 
+
+
