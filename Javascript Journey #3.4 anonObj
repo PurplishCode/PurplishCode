@@ -1,0 +1,26 @@
+// Anonymous Object.
+// No need of naming them, downside = Can't directly refrence it.
+// Upside = less syntax.
+
+
+class Card {
+    constructor(value, type) {
+     this.value = value;
+     this.type = type;
+    }
+ }
+ 
+ 
+ // Creating the object without needing of naming them, which is lazy tbh.
+ 
+ let cards = [new Card("A","Heart"),new Card("2","Spade")];
+ 
+ 
+ // Specifying the array, then index. (0 would be "A","Heart" since we didn't create an unique object) and our property.
+ 
+ console.log(cards[0].value, cards[0].type);
+ console.log(cards[1].value, cards[1].type);
+ 
+ 
+ cards.forEach(array => console.log(`${array.value} ${array.type}`));
+ 
