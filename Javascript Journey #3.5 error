@@ -1,0 +1,26 @@
+// error in JS!
+// Important lesson.
+
+
+// error = is an object with a description of something went wrong.
+// throw = executes an user-defined error. (We're the ones in command)
+
+
+
+// we "try" executing some errors and trials. You can add logic onto many cases (suchas IF users input NaN on Numerical field, etc.)
+try{
+    w1 = window.prompt("Enter your #");
+    w1 = Number(w1);
+    
+    if(isNaN(w1)) throw `${w1} isn't a number, try again.`;
+    if(w1 == "") throw `Please input a number.`;
+    
+    console.log(`${w1} is a number`);
+    
+    } catch(error){
+      console.log(error);
+    }
+    finally {
+      console.log("This code will executes no matter if the program / syntax failed or succesful.");
+    }
+
