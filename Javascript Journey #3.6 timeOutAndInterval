@@ -1,0 +1,89 @@
+
+    // setTimeout()!
+
+// It invokes a function after a number of millisecond
+// asynchronus function (doesn't pause execution) | Basically doesn't pause our next execution of programs.
+
+
+// Creating function with function expression.
+
+
+/*
+
+let merchandise = "Roboto";
+let price = "$69.420";
+const timeOut = (merchandise, price) => {
+  alert(`Please buy my ${merchandise} for only ${price}!`);
+}
+
+const timeOut2 = () => {
+  alert("Pleaseeee!");
+}
+
+const timeOut3 = () => {
+  alert("Pweassseeeeeeeeeee!");
+}
+
+
+// For each iteration (or given milliseconds,) setTimeout() will continously run it's syntax.. To stop it from running however,
+// there's a special argument of clearTimeout() which immediately stops our setTimeout().
+
+
+time1 = setTimeout(timeOut, 3000, merchandise, price);
+time2 = setTimeout(timeOut2, 7000);
+time3 = setTimeout(timeOut3, 10000);
+
+
+
+
+
+// If this button is clicked, our variable of time1,time2,time3, (depending on which it currently lands) will stop the setTimeout() on their stored value.
+
+document.getElementById("myButton").onclick = function() {
+  clearTimeout(time1);
+  clearTimeout(time2);
+  clearTimeout(time3);
+  document.getElementById("myLabel").innerHTML = "Thanks for buying :)";
+}
+
+
+*/
+
+// setInterval()!
+
+// It's so much like setTimeout(), it'll invoke a function BUT repeatedly after a number of milliseconds.
+
+
+
+// We create our variable of count, keeping track each iteration and where does it began.
+
+
+let count = 0;
+
+max = window.prompt("Enter #");
+max = Number(max);
+
+// If the users input their prompt (max) variable will store it.
+
+// myTime acts like an ID for our clearInterval, to stop iterations until the requirement is met. setInterval will invoke the function, then the milliseconds of each happening.
+const myTime = setInterval(countUp, 1000);
+
+try{
+  if(isNaN(max)) throw console.log("It's not a number."), clearInterval(myTime);
+if(max == "") throw clearInterval(myTime);
+if(myTime) throw max;
+} catch(error) {
+ 
+}
+
+
+// With the function, count++ will keep on incrementing, then we'll display our increment of count.. However we'll have to limit it. IF count is greater or equal to max (users prompt)
+// we'll clear the Interval by invoking the setInterval ID.
+function countUp() {
+ count++;
+ console.log(`Counting.. ${count}`);
+ if(count >= max) {
+  clearInterval(myTime);
+  console.log(`${count} has stopped!`);
+ }
+}
