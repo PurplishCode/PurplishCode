@@ -1,0 +1,43 @@
+
+// asynchronus and synchronus!!
+// Important lessons.
+
+// Synchronus => In an Ordered sequences.
+//               Step-by-Step Linear Instructions.
+//                Start now, Finish now!
+
+// Example: It'll go down step-by-step until it's finished.. If the first step isn't done, next-step will have to wait.
+
+/*
+
+console.log("Start");
+console.log("Our method or anything.");
+console.log("Finish");
+
+*/
+
+// Asynchronus => Out of order sequences.
+//                Ex. Accessing Database.
+//                     Fetch File.
+//                     Task that takes time.
+//                      Start now, finish sometimes later.
+
+// It doesn't go any order. If step two hasn't finished, it'll finish sometime later but the programs (next-step) will keep continue.
+console.log("Start program");
+setTimeout(() => console.log("Asynchronus code loaded in!"), 4000);
+console.log("End Program");
+
+// console.time() method! => Keeping track of operators time.
+// Starts a time you can use to track how long an operation. Give each timer an unique name!
+
+
+
+
+// .time and .timeEnd method will tracks how long a synchronus program takes. It'll not wait around for programs to load (or such, asychronus).
+
+console.time("START");
+
+
+alert("How long..");
+
+console.timeEnd("START");
