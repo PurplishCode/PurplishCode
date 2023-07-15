@@ -1,0 +1,41 @@
+// Array with Object.
+
+// AAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
+class car {
+    constructor(model, type, year) {
+        this.model = model;
+        this.type = type;
+        this.year = year;
+    }
+    drive() {
+        console.log(`Your ${this.model} is driving!`);
+    }
+}
+
+const car1 = new car("Bugatti","A-15",2012);
+const car2 = new car("Lambo","B-12",2020);
+const car3 = new car("Converte","C-11",1980);
+const car4 = new car("Muta","D-15",1999);
+
+// Array but buncha object. It's like 2D arrays.
+
+const cars = [car1, car2, car3, car4];
+
+// This example basically tells you to console the array of cars, which will directly pinpoint into [0] (our first object), then specifying of what property we're displaying.
+
+// console.log(cars[0].model);
+
+// cars[0].drive();
+
+
+// For-looping with arrays addition of object. (Finally this 'of' is useful).
+
+raceWar(cars);
+
+function raceWar() {
+    for(let carList of cars) {
+     carList.drive();
+    }
+}
