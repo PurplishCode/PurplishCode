@@ -1,0 +1,39 @@
+
+// Fun Practice with clock!
+
+
+let clockLabel = document.getElementById("myLabel");
+
+
+function update() {
+  let date = new Date();
+  
+  clockLabel.innerHTML = formatTime(date); // date also acts like argument passing as our reference point.
+
+
+  function formatTime() {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    
+    pmOrAm = hours >= 12 ? "P.M" : "A.M";
+    hours = (hours % 12) || 12;
+    
+     hours = setZeroes(hours);
+     minutes = setZeroes(minutes);
+     seconds = setZeroes(seconds);
+
+    return `${hours}:${minutes}:${seconds} ${pmOrAm}`;
+  
+  }
+
+  function setZeroes(time) {
+  time = time.toString();
+  return time.length < 2 ? "0" + 2 : time;
+  }
+}
+
+
+setInterval(update, 1000);
+
+update();
