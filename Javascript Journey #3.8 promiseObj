@@ -1,0 +1,134 @@
+// promises!!
+// Important lessons, verryyy.
+
+// Object that encapsulates the result of an asynchronus operation.
+// Let asynchronus methods return values like synchronous methods.
+// "I promise to return something in the future"
+
+
+// Promises has a state: There's 'pending' then: 'fullfiled' or 'rejected'
+// the result is what can be returned.
+
+// There's two parts, producing and consuming.
+
+// When this process (asynchronous programs) is finished, the promise will return a value OR catches an exception if there's any unloaded / error files.
+
+
+// Promise has two arguments, resolve and reject.
+
+// This is our first part, producing.
+
+/*
+
+const promise = new Promise((resolve, reject) => {
+
+    let fileLoaded = false;
+
+    if(fileLoaded) {
+        resolve("File has loaded.");
+    } else {
+        reject("File hasn't loaded.");
+    }
+    
+})
+
+// When this process (asynchronous programs) is finsished, the promise will return a value OR catches an exception if there's any unloaded / error files.
+// Or concisely, if this asynchronous process is finished, we'll invoke the resolve argument. if NOT, we'll invoke reject.
+
+
+// And this'll be our second part, or simply what'll happend afterwards? (consuming)
+
+// If our promise returns resolve, we'll invoke then() if NOT then .catch()
+
+promise.then( value => {console.log(value)})
+       .catch( error => { console.log(error)});
+
+       */
+
+
+
+       document.getElementById("btnPromise").onclick = () => {
+        
+        time = document.getElementById("ms").value;
+        time = Number(time);
+
+       
+        alert("Hey, you clicked me!");
+        const wait = time => new Promise(resolve => {
+            setTimeout(resolve, time);
+        })
+        
+        wait(time).then(() => alert("Kinda tickles."));
+      }
+
+
+
+      const promise = new Promise((resolve, reject) => {
+       let isFileLoaded = false;
+        if(isFileLoaded) {
+            resolve("File is loaded.");
+        } else {
+            reject("File isn't loaded..");
+        }
+      });
+      promise.then(value => console.log(value)).catch(error => { console.log(error)});
+
+
+
+      // async function!
+      // Function that returns promise.
+
+     // Just type keyword async for async function.
+     // This'll also works the same as Promise Object, but we don't have to set resolve nor reject.
+
+      async function fileLoad() {
+      let fileLoaded = true;
+
+
+      if(fileLoaded) {
+        return "File is loaded!";
+      } else {
+        throw "File isn't loaded..."
+      }
+   
+
+      }
+// We invoke the function name, still worked the same.
+
+fileLoad().then(value => console.log(value)).catch(error => console.log(error));
+
+
+
+// await keyword!
+// Makes async function AWAIT for promise.
+
+async function fileLoad() {
+    let fileLoaded = true;
+
+
+    if(fileLoaded) {
+      return "File is loaded!";
+    } else {
+      throw "File isn't loaded...";
+    }
+ 
+
+    }
+
+
+async function startProcess() {
+    // try this code, if there's an error.. Then we catch it.
+    try {
+    let messages = await fileLoad();
+    console.log(messages);
+    }
+    catch(error) {
+     console.log(error);
+    }
+}
+
+// This clears up writing .then and .catch keyword.
+startProcess();
+// You can only use the await keyword INSIDE of async function.
+// It's helpful to organize buncha async function.
+
