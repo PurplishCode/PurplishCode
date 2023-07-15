@@ -1,0 +1,29 @@
+
+// Module in Javascript!
+// ES6  kinda thingy..
+// We can import pre-written JS syntax code to be used whenever we desire!
+// Also, don't forget to specify your type as module on the .html file (this vanilla JS context only)
+
+
+// import {PI, getCircumferences, getArea} from "./math_util.js";
+// We can also have alternative way IF the import file is a lot.
+// Each time we're invoking the arguments or method or whatevs, use the given nickname to preceeds.
+
+import * as mathUtil from "./math_util.js";
+
+
+console.log(mathUtil.PI);
+
+
+let radius = window.prompt("Enter #");
+radius = Number(radius);
+
+
+let circumfrences = mathUtil.getCircumferences(radius);
+
+let result = mathUtil.getArea(circumfrences);
+
+result = Math.floor(result);
+
+console.log(result);
+
