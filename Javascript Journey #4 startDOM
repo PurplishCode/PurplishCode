@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+   <label id="myLabel"></label>
+   <label>Milliseconds: <input type="text" id="ms"></label><br>
+   <br>
+   
+   <button id="btnPromise">Submit</button>
+   <div id="testDiv"></div>
+   <script  src="index.js">
+    // DOM (Document Object Model) it's an API!!
+// An interface to changing the content of page.
+
+
+// console.log(document.URL);
+
+document.title = "thisAlterTitle";
+
+// This'll alter our body background-color.
+// We'll have to explictly specify, such as (head.style ) etc..
+// document.body.style.backgroundColor = "black";
+
+// document, we'll invoke the id.. Then adding text (innerHTML) into the page.
+
+document.getElementById("testDiv").innerHTML = "<br> purple";
+
+document.body.style.color = "skyblue";
+
+
+    </script>
+</body>
+</html>
