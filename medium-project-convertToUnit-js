@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        h1 {
+    color: blue;
+}
+
+* {
+    font-family: cursive;
+}
+
+#afterValue {
+    border: 1px solid red;
+}
+    </style>
+</head>
+<body>
+   <h1>Temperature of scaling!</h1>
+    <label>Enter Temperature:</label>
+    <input type="text" id="inputValue"><br><p>Convert to unit: </p><br>
+
+    <label><input type="checkbox" id="celsiusCheck">Celsius</label><br>
+    <label><input type="checkbox" id="fahCheck">Fahrenheit</label>
+    <br><br><input type="submit" id="submitValue"><br>
+    <br><label id="afterValue"></label>
+    <script>
+
+    // Medium Project! (Converting numerics to Fahrenheit / Celsius based on checkboxes Value)
+
+let temp;
+
+
+document.getElementById("submitValue").onclick = function() {
+    if(document.getElementById("celsiusCheck").checked) {
+     temp = document.getElementById("inputValue").value;
+     temp = Number(temp);
+     
+     temp = convertTempC(temp);
+
+     document.getElementById("afterValue").innerHTML = `The celsius is.. ${temp}, impressive!`;
+
+    } else if(document.getElementById("fahCheck").checked) {
+        temp = document.getElementById("inputValue").value;
+     temp = Number(temp);
+     
+     temp = convertTempF(temp);
+
+    
+
+     document.getElementById("afterValue").innerHTML = `The fahrenheit is.. ${temp}, quite extraordinary!`;
+
+    } else {
+       do { reload = alert("Please insert properly.")} while(reload);
+    if(reload) {
+        console.log("Let's go!");
+    }
+    }
+
+
+}
+
+function convertTempC(temp) {
+    temp = temp.toLocaleString(undefined, {style: "unit", unit: "celsius"});
+    return temp;
+
+}
+
+
+function convertTempF(temp) {
+    temp = temp.toLocaleString(undefined, {style: "unit", unit: "fahrenheit"});
+    return temp
+}
+    </script>
+</body>
+</html>

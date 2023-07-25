@@ -1,0 +1,64 @@
+// HTML SYNTAX FILE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <label for="inputType">Input Width:<input type="text" id="inputWidth"></label>
+   <label for="inputType">Input height:<input type="text" id="inputHeight"></label>
+   <button type="button" id="myButton">Submit</button> 
+   <br><label id="afterRange"></label>
+    
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JS SYNTAX FILE
+
+function callNumber(width, height) {
+return width * height;
+}
+
+// Breaking the code!
+// Jadi kita akan membuat suatu function callNumber, berisikan parameters width dan height. Didalam function curly brackets nya.
+// Kita akan mengembalikan kondisi width * height kembali ke function.
+// Lalu kita buat kondisi DOM onclick, berisikan dengan input value dari user (width dan height) lalu mengubah nya menjadi numerics.
+// Setelah itu, kita akan memanggil kembali function didalam variable, function akan memanggil kembali pengkondisian yang sudah kita buat (width * height) dengan menambahkan arguments didalam parenthesses function(argument)
+// Lalu kita gunakan pengkondisian tersebut (function yang sudah terpanggil menggunakan variable) dan membuat hasil nya.
+
+document.getElementById("myButton").onclick = function() {
+    width = document.getElementById("inputWidth").value;
+    height = document.getElementById("inputHeight").value;
+
+    width = Number(width);
+    height = Number(height);
+
+    let radius = callNumber(width, height);
+
+    document.getElementById("afterRange").innerHTML = "Count is: " + radius;
+    
+}

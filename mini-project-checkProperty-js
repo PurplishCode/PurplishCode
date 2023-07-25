@@ -1,0 +1,58 @@
+// HTML FILE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="myCheckbox">Subscribe: </label><input type="checkbox" id="myCheckbox">
+    <br><button type="button" id="myButton">Submit</button><br>
+    <p id="subscribeAfter"></p>
+   
+    <label for="myLabel">Would you like to pay for subscription with?</label>
+    <br><label for="paypalBtn">Paypal: <input type="checkbox" id="paypalBtn"></label>
+    <br><label for="visaBtn">Visa:<input type="checkbox" id="visaBtn"></label>
+    <br>Master:<label for="masterBtn"><input type="checkbox" id="masterBtn"></label>
+    <br>
+    <button type="button" id="mySubmit">Submit</button>
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+// JS FILE
+
+// Pengkondisian menggunakan DOM, dan attribute .checked untuk melihat value T or F dari checkbox.
+document.getElementById("myButton").onclick = function() {
+    const checkBox = document.getElementById("myCheckbox");
+    if(checkBox.checked) {
+     document.getElementById("subscribeAfter").innerHTML = "You're subscribed!";
+    } else {
+        document.getElementById("subscribeAfter").innerHTML = "You're not subscribed.";
+    }
+}
+
+// Check Property with Conditioning.
+
+document.getElementById("mySubmit").onclick = function() {
+    const paypalBtn = document.getElementById("paypalBtn");
+    const visaBtn = document.getElementById("visaBtn");
+    const masterBtn = document.getElementById("masterBtn");
+
+    if(paypalBtn.checked) {
+        console.log("You're paying with Paypal!");
+    } else if(visaBtn.checked) {
+        console.log("You're paying with Visa!");
+    } else if(masterBtn.checked) {
+        console.log("You're paying with MasterCard!");
+    } else {
+        console.log("Please Select Your Payment.");
+    }
+}

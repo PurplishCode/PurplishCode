@@ -1,0 +1,43 @@
+// HTML SYNTAX FILE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <label for="inputType">Input Width:<input type="text" id="inputValue"></label>
+   <button type="button" id="myButton">Submit</button> 
+   <br><label id="count0"></label>
+    
+    
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+
+
+// JS SYNTAX FILE
+
+function callCount() {
+    let symbols = window.prompt("Enter Symbols of Value");
+
+    let count = document.getElementById("inputValue").value;
+    for(let j=1; j <= count; j+=1) {
+    document.getElementById("count0").innerHTML += symbols;
+    }
+
+    clickAt(count);
+}
+
+document.getElementById("myButton").onclick = function clickAt(count, symbols) {
+    count = Number(count);
+
+    
+    callCount();
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Guess da Numerico sincon!</h1>
+   <p>Pick # from 1 - 10</p>
+   <label>Enter Number: <input type="text" id="fieldInput"></label><br>
+   <input type="submit" id="submitInput">
+    
+    <script src="index.js">
+    // Random Guessing with DOM Manipulasi!
+
+
+
+// Breaking down the code!
+
+// Kita membuat variable guess untuk mengisikan value angka acak, menggunakan Math.floor agar nilai tidak menjadi floating point.
+// Variable guesses untuk placeholder untuk nantinya berapa-kali kita meng-submit input, dengan incrementasi += 1;
+// Jika guess == number, akan dilakukan template literal alert mengenai berapa kali sudah kita input DAN nilai kecocokan nya.
+
+const guess = Math.floor(Math.random() * 10) + 1;
+
+let guesses = 0;
+
+function guessNumber(guess, number) {
+    if(guess == number) {
+        alert(`${number} is the equivelant of your guess, it took you ${guesses} of tries!`);
+    } else if(guess > number) {
+        alert("Guess again!");
+    } else {
+        alert("Guess again.");
+    }
+}
+
+document.getElementById("submitInput").onclick = function() {
+    number = document.getElementById("fieldInput").value;
+    guesses +=1;
+
+   guessNumber(guess, number);
+}
+    </script>
+</body>
+</html>
