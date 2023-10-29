@@ -1,6 +1,15 @@
-🚀 Salutions fellow Developer. You've stumbled upon some enthusiastic coders.. Me! I'm PurpleCode. I'm still developing myself and adapt on certain programming language. It's nice to see you, and happy codings!
+<h3 align="center">
+Hi there, I am <a href="#" target="_blank" rel="nonreferrer">Darell.</a>
+</h3>
 
-<!---
-PurplishCode/PurplishCode is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+
+<h1>Github Stats ⭐</h1>
+
+[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=PurplishCode)](https://github.com/PurplishCode)
+<br><br>
+<hr>
+<h1>Most used languages: (Deprecated)</h1>
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=PurplishCode&layout=compact)](https://github.com/PurplishCode)
+
