@@ -1,5 +1,5 @@
 <h3 align="center">
-Hi there, I am <a href="#" target="_blank" rel="nonreferrer">Darell.</a>
+Good evening! My name is <a href="#" target="_blank" rel="nonreferrer">Darell.</a>
 </h3>
 
 
@@ -16,3 +16,5 @@ Hi there, I am <a href="#" target="_blank" rel="nonreferrer">Darell.</a>
 
 <h1>Technical Skill 💼</h1>
 
+<strong>Laravel</strong>
+<strong>Tailwind / Bootstrap </strong>
